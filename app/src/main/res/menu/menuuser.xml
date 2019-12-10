@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:fontFamily="@font/cairo"
+        android:icon="@drawable/ic_toc_black_24dp"
+        android:title="المنشورات" />
+    <item
+        android:id="@+id/tv"
+        android:fontFamily="@font/cairo"
+        android:icon="@drawable/ic_wc_black_24dp"
+        android:title="الاصدقاء" />
+    <item
+        android:id="@+id/ma"
+        android:fontFamily="@font/cairo"
+        android:icon="@drawable/ic_message_black_24dp"
+        android:title="رسائل" />
+
+</menu>

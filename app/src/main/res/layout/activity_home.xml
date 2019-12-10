@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".homeActivity">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:id="@+id/nmenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ed1250"
+        app:itemTextColor="#fff"
+        android:outlineSpotShadowColor="#fff"
+        android:layoutDirection="rtl"
+        app:menu="@menu/menu"
+        android:fontFamily="@font/cairo"
+
+        android:focusableInTouchMode="true"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="63dp"
+        app:layout_goneMarginBottom="100dp">
+
+
+        <LinearLayout
+            android:id="@+id/nomatch"
+            android:layout_width="match_parent"
+            android:layout_height="281dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_launcher_foreground"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="297dp"
+                    android:layout_height="74dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/cairo"
+                    android:gravity="center"
+                    android:text="عدرا لا توجد اي مباريات لليوم"
+                    android:textColor="#FBFBFB" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/goallmatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_foreground"
+                android:fontFamily="@font/cairo"
+                android:text="تابع الملخصات" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recpost"
+            android:layout_width="match_parent"
+            android:layout_height="568dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-9225575939386535/3910152869"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
